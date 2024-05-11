@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
 {
-    [SerializeField] private float _movementSpeed;
-    private Rigidbody2D _rb;
+
     private Vector2 _moveDirection;
 
     void Start()
     {
-        _rb = GetComponent<Rigidbody2D>();
+
     }
 
     void Update()
@@ -33,6 +32,6 @@ public class PlayerMovementController : MonoBehaviour
 
     void Move()
     {
-        _rb.velocity = new Vector2(_moveDirection.x * _movementSpeed, _moveDirection.y * _movementSpeed);
+        Player.instance.rb.velocity = new Vector2(_moveDirection.x * Player.instance.maxSpeed, _moveDirection.y * Player.instance.maxSpeed);
     }
 }
