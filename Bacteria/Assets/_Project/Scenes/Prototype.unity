@@ -136,9 +136,9 @@ GameObject:
   - component: {fileID: 25179618}
   - component: {fileID: 25179621}
   - component: {fileID: 25179622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -382,13 +382,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183839649}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 701203002}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &183839651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,9 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletObject: {fileID: 4943447220828603399, guid: d9801b4c3f3ba91418fc7b4e8f547343, type: 3}
-  _speed: 5
-  _life: 5
-  _spawnerType: 1
+  _spawnerType: 0
   _firingRate: 0.4
 --- !u!1 &233197071
 GameObject:
@@ -417,9 +415,9 @@ GameObject:
   - component: {fileID: 233197072}
   - component: {fileID: 233197074}
   - component: {fileID: 233197075}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -648,6 +646,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &387930128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 387930129}
+  - component: {fileID: 387930130}
+  m_Layer: 0
+  m_Name: Bullet Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &387930129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387930128}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 671096345}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &387930130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387930128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e068cb1627f38774aa8c00f7bba37535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletObject: {fileID: 4943447220828603399, guid: d9801b4c3f3ba91418fc7b4e8f547343, type: 3}
+  _spawnerType: 1
+  _firingRate: 1.2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,11 +965,11 @@ GameObject:
   - component: {fileID: 671096340}
   m_Layer: 0
   m_Name: Enemy_PF
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &671096340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1069,6 +1114,7 @@ Transform:
   m_Children:
   - {fileID: 700630436}
   - {fileID: 1435025361}
+  - {fileID: 387930129}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &681873795
@@ -1190,7 +1236,7 @@ GameObject:
   - component: {fileID: 700630438}
   m_Layer: 0
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1288,7 +1334,7 @@ GameObject:
   - component: {fileID: 701203003}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1518,37 +1564,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1397128002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1082183839
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1082183840}
-  m_Layer: 0
-  m_Name: Enemy_PF
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1082183840
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082183839}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.88576645, y: -0.6090479, z: -0.108598724}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1115641151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,7 +1574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1115641152}
   - component: {fileID: 1115641153}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bullet Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1594,8 +1609,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletObject: {fileID: 4943447220828603399, guid: c9ad0defa045fc249b1e147a2a700e3c, type: 3}
-  _speed: 10
-  _life: 5
   _spawnerType: 0
   _firingRate: 0.5
 --- !u!1 &1270665429
@@ -1841,8 +1854,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletObject: {fileID: 4943447220828603399, guid: d9801b4c3f3ba91418fc7b4e8f547343, type: 3}
-  _speed: 2
-  _life: 4
   _spawnerType: 1
   _firingRate: 0.6
 --- !u!1 &1760252213
@@ -2033,7 +2044,7 @@ GameObject:
   - component: {fileID: 1848938411}
   m_Layer: 0
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2082,7 +2093,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2291,6 +2302,5 @@ SceneRoots:
   - {fileID: 701203002}
   - {fileID: 1270665430}
   - {fileID: 346988575}
-  - {fileID: 1082183840}
   - {fileID: 842233818}
   - {fileID: 671096345}

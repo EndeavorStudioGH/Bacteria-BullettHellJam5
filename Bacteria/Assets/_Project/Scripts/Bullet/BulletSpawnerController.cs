@@ -9,8 +9,6 @@ public class BulletSpawnerController : MonoBehaviour
 
     [Header("Bullet Attributes")]
     [SerializeField] private GameObject _bulletObject;
-    [SerializeField] private float _speed;
-    [SerializeField] private float _life;
 
     [Header("Spawner Attributes")]
     [SerializeField] private SpawnerType _spawnerType;
@@ -43,8 +41,8 @@ public class BulletSpawnerController : MonoBehaviour
     private void Fire()
     {
         _spawnedBullet = Instantiate(_bulletObject, transform.position, Quaternion.identity);
-        _spawnedBullet.GetComponent<BulletController>().SetSpeed(_speed);
-        _spawnedBullet.GetComponent<BulletController>().SetLife(_life);
+        //_spawnedBullet.GetComponent<BulletController>().SetSpeed(_speed);
+        //_spawnedBullet.GetComponent<BulletController>().SetLife(_life);
         _spawnedBullet.transform.rotation = transform.rotation;
     }
 }

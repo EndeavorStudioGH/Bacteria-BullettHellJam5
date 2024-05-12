@@ -24,8 +24,8 @@ public class EnemyMovementController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Current Index: "+ waypointIndex);
-        Debug.Log(_waypoints[waypointIndex].position.x);
+        //Debug.Log("Current Index: "+ waypointIndex);
+        //Debug.Log(_waypoints[waypointIndex].position.x);
 
         if (Mathf.Abs(transform.position.x - _waypoints[waypointIndex].position.x) > 0.2f)
         {

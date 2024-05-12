@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public class EnemyBulletController : MonoBehaviour
 {
     [SerializeField] private float _bulletLife = 1.0f;
     [SerializeField] private float _rotation = 0.0f;
     [SerializeField] private float _speed = 1.0f;
-   
+
     private Vector2 _spawnPoint;
     private float _timer = 0.0f;
 
@@ -34,16 +34,16 @@ public class BulletController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
-        if (collision.tag == "Enemy")
+        if (collision.tag == "Player")
         {
-            Debug.Log("Enemy damaged");
-            Destroy(gameObject);
+            Debug.Log("Player damaged");
         }
-        else if(collision.tag == "Bullet")
+        else if (collision.tag == "Bullet")
         {
             Debug.Log("BULLET");
             Destroy(gameObject);
         }
+
     }
 
     private void OnBecameInvisible()
