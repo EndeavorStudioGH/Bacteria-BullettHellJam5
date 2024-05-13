@@ -7,13 +7,16 @@ public class BulletController : MonoBehaviour
     [SerializeField] private float _bulletLife = 1.0f;
     [SerializeField] private float _rotation = 0.0f;
     [SerializeField] private float _speed = 1.0f;
-   
+    [SerializeField] private int _damage = 1;
+
     private Vector2 _spawnPoint;
     private float _timer = 0.0f;
+    private GamePointController _pointController;
 
     void Start()
     {
         _spawnPoint = new Vector2(transform.position.x, transform.position.y);
+        _pointController = GamePointController.instance;
     }
 
     void Update()
@@ -36,18 +39,21 @@ public class BulletController : MonoBehaviour
         
         if (collision.tag == "Enemy")
         {
+            _pointController.PointPositive(50);
             Debug.Log("Enemy damaged");
+
             Destroy(gameObject);
         }
         else if(collision.tag == "Bullet")
         {
-            Debug.Log("BULLET");
+            _pointController.PointPositive(10);
             Destroy(gameObject);
         }
     }
 
     private void OnBecameInvisible()
     {
+        _pointController.PointPositive(5);
         Destroy(gameObject);
     }
 

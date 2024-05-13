@@ -7,13 +7,17 @@ public class EnemyBulletController : MonoBehaviour
     [SerializeField] private float _bulletLife = 1.0f;
     [SerializeField] private float _rotation = 0.0f;
     [SerializeField] private float _speed = 1.0f;
+    [SerializeField] private int _damage = 1;
 
     private Vector2 _spawnPoint;
     private float _timer = 0.0f;
 
+    private GamePointController _pointController;
+
     void Start()
     {
         _spawnPoint = new Vector2(transform.position.x, transform.position.y);
+        _pointController = GamePointController.instance;
     }
 
     void Update()
@@ -37,6 +41,7 @@ public class EnemyBulletController : MonoBehaviour
         if (collision.tag == "Player")
         {
             Debug.Log("Player damaged");
+            _pointController.PointNegative(20);
         }
         else if (collision.tag == "Bullet")
         {

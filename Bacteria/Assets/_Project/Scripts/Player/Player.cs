@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public float maxSpeed;
     public Rigidbody2D rb;
     [HideInInspector] public int currentHealth;
+    
 
     void Awake()
     {
