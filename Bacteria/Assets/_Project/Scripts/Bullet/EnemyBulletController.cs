@@ -5,9 +5,9 @@ using UnityEngine;
 public class EnemyBulletController : MonoBehaviour
 {
     [SerializeField] private float _bulletLife = 1.0f;
-    [SerializeField] private float _rotation = 0.0f;
+    //[SerializeField] private float _rotation = 0.0f;
     [SerializeField] private float _speed = 1.0f;
-    [SerializeField] private int _damage = 1;
+    //[SerializeField] private int _damage = 1;
 
     private Vector2 _spawnPoint;
     private float _timer = 0.0f;

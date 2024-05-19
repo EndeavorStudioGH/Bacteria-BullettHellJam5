@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.85882354, g: 0.2106426, b: 0.1568627, a: 1}
   m_FlipX: 0
@@ -135,8 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletLife: 1
-  _rotation: 0
   _speed: 10
+  _damage: 1
 --- !u!50 &3179763146018780055
 Rigidbody2D:
   serializedVersion: 4

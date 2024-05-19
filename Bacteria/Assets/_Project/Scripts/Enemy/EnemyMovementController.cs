@@ -57,6 +57,39 @@ public class EnemyMovementController : MonoBehaviour
                 }
             }
         }
+        //Y
+        /*
+        if (Mathf.Abs(transform.position.y - _waypoints[waypointIndex].position.xy > 0.2f)
+        {
+            if (transform.position.y < _waypoints[waypointIndex].position.y)
+            {
+                _rb.velocity = new Vector2(_rb.velocity.x, _moveSpeed);
+                transform.localScale = new Vector3(-1f, 1f, 1f);
+            }
+            else
+            {
+                _rb.velocity = new Vector2(_rb.velocity.x, -_moveSpeed);
+                transform.localScale = Vector3.one;
+            }
+        }
+        else
+        {
+            _rb.velocity = new Vector2(0f, _rb.velocity.y);
+
+            waitCounter -= Time.deltaTime;
+
+            if (waitCounter <= 0)
+            {
+                waitCounter = _waitAtPoints;
+                waypointIndex++;
+
+                if (waypointIndex >= _waypoints.Length)
+                {
+                    waypointIndex = 0;
+                }
+            }
+        }
+        */
     }
 
     private void Movement()

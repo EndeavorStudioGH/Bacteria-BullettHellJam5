@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     [SerializeField] private float _bulletLife = 1.0f;
-    [SerializeField] private float _rotation = 0.0f;
+    //[SerializeField] private float _rotation = 0.0f;
     [SerializeField] private float _speed = 1.0f;
     [SerializeField] private int _damage = 1;
 
@@ -41,7 +41,7 @@ public class BulletController : MonoBehaviour
         {
             _pointController.PointPositive(50);
             Debug.Log("Enemy damaged");
-
+            collision.GetComponent<EnemyHealthController>().DamageEnemy(_damage);
             Destroy(gameObject);
         }
         else if(collision.tag == "Bullet")
