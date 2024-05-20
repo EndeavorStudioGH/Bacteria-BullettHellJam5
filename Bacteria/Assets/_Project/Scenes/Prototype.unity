@@ -174,6 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPosition: {fileID: 1115641152}
+  anim: {fileID: 233197075}
 --- !u!50 &25179620
 Rigidbody2D:
   serializedVersion: 4
@@ -650,6 +651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 233197072}
   - component: {fileID: 233197074}
+  - component: {fileID: 233197075}
   m_Layer: 8
   m_Name: Sprite
   m_TagString: Player
@@ -713,7 +715,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 265c2ffded7cf264f82f5d00a223bbe1, type: 3}
+  m_Sprite: {fileID: 1223992029, guid: 7217bcca56274f848a9277f463cf4148, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -724,6 +726,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &233197075
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233197071}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eea10bed49c500240820c0e60bfa8097, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &291956135
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,7 +1231,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1295,7 +1318,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.30562478, g: 0.43624654, b: 0.6415094, a: 0}
+  m_BackGroundColor: {r: 0.70980394, g: 0.3617577, b: 0.2966358, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1320,7 +1343,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 2.58
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3005,7 +3028,7 @@ MonoBehaviour:
   m_Follow: {fileID: 233197072}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 8
+    OrthographicSize: 2.58
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0

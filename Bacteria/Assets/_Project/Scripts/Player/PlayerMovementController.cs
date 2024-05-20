@@ -9,6 +9,7 @@ public class PlayerMovementController : MonoBehaviour
 
     private Vector2 _moveDirection;
     public Transform shotPosition;
+    public Animator anim;
 
     void Start()
     {
@@ -30,14 +31,34 @@ public class PlayerMovementController : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
+        if (moveX != 0)
+        {
+            anim.SetFloat("speed", Mathf.Abs(moveX));
+        }
+        else if (moveY != 0)
+        {
+            anim.SetFloat("speed", Mathf.Abs(moveY));
+        }
+        else
+        {
+            anim.SetFloat("speed", 0.0f);
+        }
+
+
+
+
         _moveDirection = new Vector2(moveX, moveY).normalized;
 
-        
+
     }
 
     void Move()
     {
         Player.instance.rb.velocity = new Vector2(_moveDirection.x * Player.instance.maxSpeed, _moveDirection.y * Player.instance.maxSpeed);
+
+
+
+
 
         if (Player.instance.rb.velocity.x < 0)
         {
