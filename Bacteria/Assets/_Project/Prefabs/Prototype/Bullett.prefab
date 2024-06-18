@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5741806662568299593}
   - component: {fileID: 2410828833302083066}
   - component: {fileID: 9153819339896797155}
+  - component: {fileID: 6117403262103848842}
   m_Layer: 10
   m_Name: Bullett
   m_TagString: Bullet
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.20407669, g: 0.8584906, b: 0.1579299, a: 1}
+  m_Sprite: {fileID: -1306425910, guid: c41dea4dfd4b32e4a983998d6b75b798, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,9 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40079377bce3ce749a291d42118209c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletLife: 1
-  _rotation: 0
-  _speed: 10
+  _bulletLife: 5
+  _speed: 2
   _damage: 1
 --- !u!58 &2410828833302083066
 CircleCollider2D:
@@ -135,9 +135,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.01043728}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3517904
 --- !u!50 &9153819339896797155
 Rigidbody2D:
   serializedVersion: 4
@@ -165,3 +165,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &6117403262103848842
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4943447220828603399}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f980d9b258da1cd47810c4632137815e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
